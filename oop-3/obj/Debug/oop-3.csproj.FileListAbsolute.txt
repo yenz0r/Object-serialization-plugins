@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop-3.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop_3.Form1.resources
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop_3.Properties.Resources.resources
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop-3.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop-3.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\oop-3\oop-3\bin\Debug\oop-3.exe.config
+\\Mac\Home\Desktop\oop-3\oop-3\bin\Debug\oop-3.exe
+\\Mac\Home\Desktop\oop-3\oop-3\bin\Debug\oop-3.pdb
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop-3.exe
+\\Mac\Home\Desktop\oop-3\oop-3\obj\Debug\oop-3.pdb
