@@ -1,0 +1,5 @@
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\Plugins\bin\Debug\Plugins.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\Plugins\bin\Debug\Plugins.pdb
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\Plugins\obj\Debug\Plugins.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\Plugins\obj\Debug\Plugins.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\Plugins\obj\Debug\Plugins.pdb

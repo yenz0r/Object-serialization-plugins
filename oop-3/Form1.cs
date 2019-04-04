@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Reflection;
+using Plugins;
+using System.Drawing;
 
 namespace oop_3
 {
     public partial class Form1 : Form
     {
         List<Car> carList = new List<Car>();
+        List<string> connectedPlugins = new List<string>();
 
         private Car car         = new Car(10, 200);
         private Car sportCar    = new SportCar(3, 210, 280);
@@ -150,6 +153,67 @@ namespace oop_3
                 statusMsg = $"Error of reading..";
             }
             statusLabel.Text = $"STATUS : \n===\n{statusMsg}";
+        }
+
+        private void LoadPlugin_Click(object sender, EventArgs e)
+        {
+            void addImg(string imgUrl)
+            {
+                try
+                {
+                    pbPluginImg.Image = Image.FromFile(imgUrl);
+                }
+                catch
+                {
+                    pbPluginImg.Image = Image.FromFile("\\\\Mac\\Home\\Desktop\\4 sem\\ООТПиСП\\oop-3\\media\\error.png");
+                }
+            }
+
+            OpenFileDialog op = new OpenFileDialog();
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                int index = op.FileName.LastIndexOf('\\');
+                string fn = op.FileName.Substring(index + 1);
+
+                if (connectedPlugins.Contains(fn))
+                {
+                    MessageBox.Show("Plugin is already connected..");
+                    return;
+                }
+
+                Assembly.LoadFrom(op.FileName);
+                foreach (Assembly asm in AppDomain.CurrentDomain.GetAssemblies())
+                {
+                    foreach (Type type in asm.GetTypes())
+                    {
+                        if (fn.Equals("PluginTesla.dll") && type.Name.Equals("PluginTesla"))
+                        {
+                            PluginTeslaInterface tesla = Activator.CreateInstance(type) as PluginTeslaInterface;
+                            if (tesla != null)
+                            {
+                                lblAdeddPlugins.Text += $"\n{tesla.PluginName()}";
+                                addImg(tesla.returnImgUrl());
+                                tesla.ShowInfo();
+                                connectedPlugins.Add(fn);
+                                return;
+                            }
+                        }
+                        if (fn.Equals("PluginBMW.dll") && type.Name.Equals("PluginBMW"))
+                        {
+                            PluginBMWinterface bmw = Activator.CreateInstance(type) as PluginBMWinterface;
+                            if (bmw != null)
+                            {
+                                lblAdeddPlugins.Text += $"\n{bmw.returnName()}";
+                                addImg(bmw.returnImgUrl());
+                                bmw.ShowInfo();
+                                connectedPlugins.Add(fn);
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+            MessageBox.Show("incorect *.dll");
         }
     }
 }

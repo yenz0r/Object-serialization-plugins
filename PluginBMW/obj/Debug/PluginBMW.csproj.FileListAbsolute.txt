@@ -1,0 +1,8 @@
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\bin\Debug\PluginBMW.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\bin\Debug\PluginBMW.pdb
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\bin\Debug\Plugins.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\bin\Debug\Plugins.pdb
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\obj\Debug\PluginBMW.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\obj\Debug\PluginBMW.csproj.CopyComplete
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\obj\Debug\PluginBMW.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginBMW\obj\Debug\PluginBMW.pdb

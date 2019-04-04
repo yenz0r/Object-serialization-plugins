@@ -1,0 +1,9 @@
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\obj\Debug\PluginTesla.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\obj\Debug\PluginTesla.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\bin\Debug\PluginTesla.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\bin\Debug\PluginTesla.pdb
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\bin\Debug\Plugins.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\bin\Debug\Plugins.pdb
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\obj\Debug\PluginTesla.csproj.CopyComplete
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\obj\Debug\PluginTesla.dll
+\\Mac\Home\Desktop\4 sem\ООТПиСП\oop-3\PluginTesla\obj\Debug\PluginTesla.pdb

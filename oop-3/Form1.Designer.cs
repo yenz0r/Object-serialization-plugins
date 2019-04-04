@@ -44,7 +44,16 @@
             this.statusLabel = new System.Windows.Forms.Label();
             this.groupCB = new System.Windows.Forms.GroupBox();
             this.btnShow = new System.Windows.Forms.Button();
+            this.LoadPlugin = new System.Windows.Forms.Button();
+            this.lblAdeddPlugins = new System.Windows.Forms.Label();
+            this.pbPluginImg = new System.Windows.Forms.PictureBox();
+            this.tbServerIP = new System.Windows.Forms.TextBox();
+            this.tbServerPort = new System.Windows.Forms.TextBox();
+            this.tbFileName = new System.Windows.Forms.TextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnGet = new System.Windows.Forms.Button();
             this.groupCB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPluginImg)).BeginInit();
             this.SuspendLayout();
             // 
             // cbClass
@@ -58,7 +67,7 @@
             "Audi",
             "Volkswagen",
             "Belarus"});
-            this.cbClass.Location = new System.Drawing.Point(32, 38);
+            this.cbClass.Location = new System.Drawing.Point(68, 38);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(121, 21);
             this.cbClass.TabIndex = 0;
@@ -68,7 +77,7 @@
             // cbProperty
             // 
             this.cbProperty.FormattingEnabled = true;
-            this.cbProperty.Location = new System.Drawing.Point(32, 79);
+            this.cbProperty.Location = new System.Drawing.Point(68, 79);
             this.cbProperty.Name = "cbProperty";
             this.cbProperty.Size = new System.Drawing.Size(121, 21);
             this.cbProperty.TabIndex = 2;
@@ -76,7 +85,7 @@
             // 
             // btnChangeValue
             // 
-            this.btnChangeValue.Location = new System.Drawing.Point(12, 156);
+            this.btnChangeValue.Location = new System.Drawing.Point(48, 156);
             this.btnChangeValue.Name = "btnChangeValue";
             this.btnChangeValue.Size = new System.Drawing.Size(75, 23);
             this.btnChangeValue.TabIndex = 3;
@@ -86,7 +95,7 @@
             // 
             // tbNewValueForProperty
             // 
-            this.tbNewValueForProperty.Location = new System.Drawing.Point(32, 115);
+            this.tbNewValueForProperty.Location = new System.Drawing.Point(68, 115);
             this.tbNewValueForProperty.Name = "tbNewValueForProperty";
             this.tbNewValueForProperty.Size = new System.Drawing.Size(121, 20);
             this.tbNewValueForProperty.TabIndex = 5;
@@ -171,7 +180,7 @@
             // 
             // btnSerializeText
             // 
-            this.btnSerializeText.Location = new System.Drawing.Point(289, 156);
+            this.btnSerializeText.Location = new System.Drawing.Point(88, 332);
             this.btnSerializeText.Name = "btnSerializeText";
             this.btnSerializeText.Size = new System.Drawing.Size(75, 23);
             this.btnSerializeText.TabIndex = 13;
@@ -181,7 +190,7 @@
             // 
             // btnDeserialize
             // 
-            this.btnDeserialize.Location = new System.Drawing.Point(480, 156);
+            this.btnDeserialize.Location = new System.Drawing.Point(329, 334);
             this.btnDeserialize.Name = "btnDeserialize";
             this.btnDeserialize.Size = new System.Drawing.Size(75, 23);
             this.btnDeserialize.TabIndex = 14;
@@ -192,7 +201,7 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(477, 41);
+            this.statusLabel.Location = new System.Drawing.Point(338, 221);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(53, 13);
             this.statusLabel.TabIndex = 15;
@@ -207,7 +216,7 @@
             this.groupCB.Controls.Add(this.cbVolkswagenAdd);
             this.groupCB.Controls.Add(this.cbBelarusAdd);
             this.groupCB.Controls.Add(this.cbAudiAdd);
-            this.groupCB.Location = new System.Drawing.Point(228, 38);
+            this.groupCB.Location = new System.Drawing.Point(21, 221);
             this.groupCB.Name = "groupCB";
             this.groupCB.Size = new System.Drawing.Size(200, 94);
             this.groupCB.TabIndex = 16;
@@ -216,7 +225,7 @@
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(106, 156);
+            this.btnShow.Location = new System.Drawing.Point(142, 156);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(75, 23);
             this.btnShow.TabIndex = 17;
@@ -224,11 +233,89 @@
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
+            // LoadPlugin
+            // 
+            this.LoadPlugin.Location = new System.Drawing.Point(329, 156);
+            this.LoadPlugin.Name = "LoadPlugin";
+            this.LoadPlugin.Size = new System.Drawing.Size(75, 23);
+            this.LoadPlugin.TabIndex = 18;
+            this.LoadPlugin.Text = "Load Plugin";
+            this.LoadPlugin.UseVisualStyleBackColor = true;
+            this.LoadPlugin.Click += new System.EventHandler(this.LoadPlugin_Click);
+            // 
+            // lblAdeddPlugins
+            // 
+            this.lblAdeddPlugins.AutoSize = true;
+            this.lblAdeddPlugins.Location = new System.Drawing.Point(326, 38);
+            this.lblAdeddPlugins.Name = "lblAdeddPlugins";
+            this.lblAdeddPlugins.Size = new System.Drawing.Size(78, 13);
+            this.lblAdeddPlugins.TabIndex = 19;
+            this.lblAdeddPlugins.Text = "Added Plugins:";
+            // 
+            // pbPluginImg
+            // 
+            this.pbPluginImg.Location = new System.Drawing.Point(476, 38);
+            this.pbPluginImg.Name = "pbPluginImg";
+            this.pbPluginImg.Size = new System.Drawing.Size(174, 141);
+            this.pbPluginImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPluginImg.TabIndex = 20;
+            this.pbPluginImg.TabStop = false;
+            // 
+            // tbServerIP
+            // 
+            this.tbServerIP.Location = new System.Drawing.Point(475, 224);
+            this.tbServerIP.Name = "tbServerIP";
+            this.tbServerIP.Size = new System.Drawing.Size(175, 20);
+            this.tbServerIP.TabIndex = 21;
+            this.tbServerIP.Text = "Server IP";
+            // 
+            // tbServerPort
+            // 
+            this.tbServerPort.Location = new System.Drawing.Point(476, 260);
+            this.tbServerPort.Name = "tbServerPort";
+            this.tbServerPort.Size = new System.Drawing.Size(174, 20);
+            this.tbServerPort.TabIndex = 22;
+            this.tbServerPort.Text = "Port ( >1024)";
+            // 
+            // tbFileName
+            // 
+            this.tbFileName.Location = new System.Drawing.Point(475, 295);
+            this.tbFileName.Name = "tbFileName";
+            this.tbFileName.Size = new System.Drawing.Size(175, 20);
+            this.tbFileName.TabIndex = 23;
+            this.tbFileName.Text = "File Name (on server)";
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(509, 334);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(53, 23);
+            this.btnSend.TabIndex = 24;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            // 
+            // btnGet
+            // 
+            this.btnGet.Location = new System.Drawing.Point(582, 334);
+            this.btnGet.Name = "btnGet";
+            this.btnGet.Size = new System.Drawing.Size(46, 23);
+            this.btnGet.TabIndex = 25;
+            this.btnGet.Text = "Get";
+            this.btnGet.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 194);
+            this.ClientSize = new System.Drawing.Size(662, 369);
+            this.Controls.Add(this.btnGet);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.tbFileName);
+            this.Controls.Add(this.tbServerPort);
+            this.Controls.Add(this.tbServerIP);
+            this.Controls.Add(this.pbPluginImg);
+            this.Controls.Add(this.lblAdeddPlugins);
+            this.Controls.Add(this.LoadPlugin);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.groupCB);
             this.Controls.Add(this.statusLabel);
@@ -243,6 +330,7 @@
             this.Text = "Form1";
             this.groupCB.ResumeLayout(false);
             this.groupCB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPluginImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,6 +354,14 @@
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.GroupBox groupCB;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button LoadPlugin;
+        private System.Windows.Forms.Label lblAdeddPlugins;
+        private System.Windows.Forms.PictureBox pbPluginImg;
+        private System.Windows.Forms.TextBox tbServerIP;
+        private System.Windows.Forms.TextBox tbServerPort;
+        private System.Windows.Forms.TextBox tbFileName;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Button btnGet;
     }
 }
 
